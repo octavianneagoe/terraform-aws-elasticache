@@ -118,7 +118,7 @@ resource "aws_security_group" "redis" {
 
   lifecycle {
     create_before_destroy = true
-    ignore_changes = [all]
+    ignore_changes        = all
   }
 }
 
