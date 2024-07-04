@@ -118,7 +118,12 @@ resource "aws_security_group" "redis" {
 
   lifecycle {
     create_before_destroy = true
-    ignore_changes        = all
+    ignore_changes = [
+      name_prefix,
+      vpc_id,
+      tags,
+      # Add any other attributes you want to ignore
+    ]
   }
 }
 
