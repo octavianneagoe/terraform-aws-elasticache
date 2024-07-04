@@ -120,6 +120,7 @@ lifecycle {
   create_before_destroy = true
   ignore_changes = [all]
 }
+}
 
 resource "aws_security_group_rule" "redis_ingress_self" {
   count = var.ingress_self ? 1 : 0
